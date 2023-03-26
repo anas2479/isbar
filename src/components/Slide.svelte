@@ -7,9 +7,18 @@
       {/if}
     </div>
   
+    <div class="h- h-9"/>
+  
+    <div class="w-full flex flex-wrap gap-4 justify-center md:justify-start">
+      {#if currentSlide}
+        <Options slide={currentSlide} lesson={lesson} on:success={success}/>
+      {/if}
+    </div>
 </div>
+
 <script>
     import { collection, doc, getDocs, query } from "firebase/firestore";
+    import Options from "../components/Options.svelte";
     import { db } from "../firebase/firebase_init";
     import { loading } from "../store";
     import _ from "lodash";
@@ -63,6 +72,8 @@
       
     })
 
+    function success(){
+    }
     
 
     onMount(()=>{
