@@ -10,6 +10,10 @@
     <div class="h- h-9"/>
     <Slide lesson ={dbLesson}/>
   </div>
+
+  <svelte:head>
+    <title>{lessonName} - {lessonNameTrans}</title>
+  </svelte:head>
   
   <script>
       import { onMount, setContext } from "svelte";

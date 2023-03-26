@@ -30,6 +30,9 @@
       </div>
     </div>
   </div>
+  <svelte:head>
+    <title>Isbar - Dooro Cashar</title>
+  </svelte:head>
   
   <script>
     import { collection, getDocs } from "firebase/firestore";
