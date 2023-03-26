@@ -87,6 +87,9 @@
     function lessonEnded(){
       new LessonEnd({
         target: document.body,
+        props: {
+          lesson: lesson
+        }
       })
     }
     

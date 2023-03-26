@@ -18,7 +18,7 @@
             <h1 class="text-5xl font-medium text-slate-100 p-2 rounded-2xl bg-green-600">Aqoon La'aan Waa Iftiin La'aan!</h1>
            
             <div class="mt-4">
-                <button bind:this={button} class="p-4 bg-white font-medium rounded-full hover:scale-95 active:scale-90 duration-75 opacity-0" on:click={resume}>Soo Bilow</button>
+                <a href="{'/?view='+lesson}" class="p-4 bg-white font-medium rounded-full hover:scale-95 active:scale-90 duration-75 ">Soo Bilow</a>
 
                 <button bind:this={button} class="p-4 bg-white font-medium rounded-full hover:scale-95 active:scale-90 duration-75 opacity-0" on:click={resume}>CasharoKale Kawardoon</button>
             </div>
@@ -33,7 +33,7 @@
     import { CustomEase } from "gsap/CustomEase";
     
 
-    
+    export let lesson;
 
     let container;
 
@@ -81,7 +81,7 @@
         tl.to(button, {
             opacity: 1,
             duration: .2,
-            delay: 1
+            delay: .3
         })
        tl.addPause()
         
