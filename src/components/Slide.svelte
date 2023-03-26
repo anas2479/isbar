@@ -28,6 +28,7 @@
     import {slideIn} from "../utils/animations"
     import { onMount } from "svelte";
     import SuccessSlide from "./success-slide.svelte";
+    import LessonEnd from "./LessonEnd.svelte";
 
     export let lesson // lesson id from url's view param
     let slides = []
@@ -83,6 +84,10 @@
       showSuccess = true
     }
 
+    function lessonEnded(){
+      new LessonEnd({
+        target: document.body,
+      })
     }
     
 
