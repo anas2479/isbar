@@ -22,6 +22,7 @@
     import { db } from "../firebase/firebase_init";
     import { loading } from "../store";
     import _ from "lodash";
+    import {slideIn} from "../utils/animations"
     import { onMount } from "svelte";
 
     export let lesson // lesson id from url's view param
@@ -69,6 +70,7 @@
       }
       console.log("currentSlide",currentSlide);
       loading.set(false)
+      slideIn()
       
     })
 
