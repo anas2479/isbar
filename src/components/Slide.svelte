@@ -1,3 +1,6 @@
+{#if showSuccess}
+  <svelte:component this={SuccessSlide} slide={currentSlide} lesson={lesson} on:lessonEnd={lessonEnded} />
+{/if}
 <div class="w-full slideIn" id="slide">
     <div class="">
       {#if currentSlide}
@@ -24,11 +27,13 @@
     import _ from "lodash";
     import {slideIn} from "../utils/animations"
     import { onMount } from "svelte";
+    import SuccessSlide from "./success-slide.svelte";
 
     export let lesson // lesson id from url's view param
     let slides = []
     
     let currentSlide
+    let showSuccess = false
 
     const parsedUrl = new URL(window.location.href);
     console.log(parsedUrl.searchParams.get("slide")); 
@@ -75,6 +80,9 @@
     })
 
     function success(){
+      showSuccess = true
+    }
+
     }
     
 
