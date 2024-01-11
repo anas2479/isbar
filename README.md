@@ -1,6 +1,6 @@
 # Isbar (To Educate One's Self)
 
-The Ibar project is a Somali-native web app to teach Somalian immigrants how to speak English.
+The Ibar project is a Somali-native web app to teach Somali immigrants how to speak English.
 Its design and function are inspired by successful language learning apps such as Duolingo. 
 
 <br>
